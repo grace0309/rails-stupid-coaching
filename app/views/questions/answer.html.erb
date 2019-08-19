@@ -1,0 +1,24 @@
+<h1>Stupid Coaching</h1>
+
+<div class="your-answer">
+<h5><%= @answer%></h5>
+<p>- You</p>
+</div>
+
+<div class="coach-reply">
+ <% if @answer == "I am going to work"%>
+ <h5>Great</h5>
+ <p>- Your coach</p>
+
+ <% elsif @answer.include? "?"%>
+ <h5>Silly question, get dressed and go to work!</h5>
+ <p>- Your coach</p>
+
+ <% else %>
+ <h5>I don't care, get dressed and go to work!"</h5>
+ <p>- Your coach</p>
+
+<%end%>
+</div>
+
+<%= link_to "Ask a new question", ask_path %>
